@@ -7,7 +7,7 @@ import time
 def system():
     os.system('cls' if os.name == 'nt' else 'clear')
 def update(version=sys.argv[1]):
-    CheckUpdate = "https://raw.githubusercontent.com/Evil-Twins-X/MyToolsUpdate/main/SubEvil.txt"
+    CheckUpdate = "https://raw.githubusercontent.com/tucommenceapousser/MyToolsUpdate/refs/heads/main/SubEvil.txt"
     req = requests.get(url=CheckUpdate).text
     if version in req :
         print(f"{Fore.green}✅💯 The tool is updated ✅💯{Style.reset}")
@@ -15,7 +15,7 @@ def update(version=sys.argv[1]):
         for i in req.splitlines():
             if ".py" in i:
                 print(f"{Fore.green} This file needs updating [{i}] {Style.reset}")
-                urlGetupdate = f"https://raw.githubusercontent.com/Evil-Twins-X/SubEvil/main/{i}"
+                urlGetupdate = f"https://raw.githubusercontent.com/tucommenceapousser/SubEvilx/main/{i}"
                 try:
                     os.remove(f"{i}")
                 except:
